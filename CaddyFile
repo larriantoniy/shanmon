@@ -1,0 +1,3 @@
+shanmon74.ru, www.shanmon74.ru {
+    reverse_proxy nginx:80
+}
