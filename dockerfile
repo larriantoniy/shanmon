@@ -5,7 +5,7 @@ WORKDIR /app
 
 # сначала зависимости (кешируется)
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 
 # потом исходники
 COPY . .
