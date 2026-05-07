@@ -1,6 +1,8 @@
 services:
   nginx:
-    build: .
+    build:
+      context: .
+      dockerfile: dockerfile
     container_name: site-nginx
     expose:
       - "80"
