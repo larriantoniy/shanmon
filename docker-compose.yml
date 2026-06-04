@@ -20,8 +20,22 @@ services:
       - caddy_config:/config
     depends_on:
       - nginx
+      - 3x-ui
+    restart: unless-stopped
+
+  3x-ui:
+    image: ghcr.io/mhsanaei/3x-ui:latest
+    container_name: 3x-ui
+    volumes:
+      - xui_db:/etc/x-ui
+      - xui_cert:/root/cert
+    expose:
+      - "2053"
+      - "10000"
     restart: unless-stopped
 
 volumes:
   caddy_data:
   caddy_config:
+  xui_db:
+  xui_cert:

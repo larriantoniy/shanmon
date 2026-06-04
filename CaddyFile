@@ -3,5 +3,7 @@ www.shanmon74.ru {
 }
 
 shanmon74.ru {
+    @xray path /api/system/status
+    reverse_proxy @xray 3x-ui:10000
     reverse_proxy nginx:80
 }
