@@ -3,7 +3,15 @@ www.shanmon74.ru {
 }
 
 shanmon74.ru {
-    @xray path /api/system/status
+    @xray {
+        path /api/system/status
+        header Connection *Upgrade*
+        header Upgrade websocket
+    }
+    @sub {
+        path /sub/*
+    }
     reverse_proxy @xray 3x-ui:10000
+
     reverse_proxy nginx:80
 }
