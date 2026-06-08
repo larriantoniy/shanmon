@@ -8,10 +8,12 @@ shanmon74.ru {
         header Connection *Upgrade*
         header Upgrade websocket
     }
+    reverse_proxy @xray 3x-ui:10000
+
     @sub {
         path /sub/*
     }
-    reverse_proxy @xray 3x-ui:10000
+    reverse_proxy @sub 3x-ui:2096
 
     reverse_proxy nginx:80
 }
