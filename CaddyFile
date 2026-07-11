@@ -3,17 +3,29 @@ www.shanmon74.ru {
 }
 
 shanmon74.ru {
-    @xray {
-        path /api/system/status
-        header Connection *Upgrade*
-        header Upgrade websocket
+    # Новый XHTTP inbound
+    handle /api/v2/content* {
+        reverse_proxy h2c://3x-ui:10001
     }
-    reverse_proxy @xray 3x-ui:10000
 
-    @sub {
-        path /sub/*
+    # Старый WebSocket — временно оставляем
+    handle /api/system/status {
+        @websocket {
+            header Connection *Upgrade*
+            header Upgrade websocket
+        }
+
+        reverse_proxy @websocket 3x-ui:10000
+        respond 404
     }
-    reverse_proxy @sub 3x-ui:2096
 
-    reverse_proxy nginx:80
+    # Подписки
+    handle /sub/* {
+        reverse_proxy 3x-ui:2096
+    }
+
+    # Все остальные запросы — настоящий сайт
+    handle {
+        reverse_proxy nginx:80
+    }
 }
