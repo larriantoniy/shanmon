@@ -1,14 +1,13 @@
-www.shanmon74.ru {
-    redir https://shanmon74.ru{uri} permanent
-}
-
 shanmon74.ru {
-    # Новый XHTTP inbound
+    log {
+        output stdout
+        format console
+    }
+
     handle /api/v2/content* {
         reverse_proxy 3x-ui:10001
     }
 
-    # Старый WebSocket — временно оставляем
     handle /api/system/status {
         @websocket {
             header Connection *Upgrade*
@@ -19,12 +18,10 @@ shanmon74.ru {
         respond 404
     }
 
-    # Подписки
     handle /sub/* {
         reverse_proxy 3x-ui:2096
     }
 
-    # Все остальные запросы — настоящий сайт
     handle {
         reverse_proxy nginx:80
     }
