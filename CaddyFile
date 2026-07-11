@@ -5,7 +5,7 @@ www.shanmon74.ru {
 shanmon74.ru {
     # Новый XHTTP inbound
     handle /api/v2/content* {
-        reverse_proxy h2c://3x-ui:10001
+        reverse_proxy 3x-ui:10001
     }
 
     # Старый WebSocket — временно оставляем
