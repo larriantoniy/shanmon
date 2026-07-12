@@ -8,15 +8,6 @@ shanmon74.ru {
         reverse_proxy 3x-ui:10001
     }
 
-    handle /api/system/status {
-        @websocket {
-            header Connection *Upgrade*
-            header Upgrade websocket
-        }
-
-        reverse_proxy @websocket 3x-ui:10000
-        respond 404
-    }
 
     handle /sub/* {
         reverse_proxy 3x-ui:2096
