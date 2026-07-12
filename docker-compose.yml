@@ -31,7 +31,6 @@ services:
       - xui_cert:/root/cert
     expose:
       - "2053"
-      - "10000"
       - "10001"
     ports:
       - "127.0.0.1:2124:2053"
