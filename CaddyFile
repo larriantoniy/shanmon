@@ -1,3 +1,6 @@
+www.shanmon74.ru {
+    redir https://shanmon74.ru{uri} permanent
+}
 shanmon74.ru {
     log {
         output stdout
