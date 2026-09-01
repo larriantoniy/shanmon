@@ -82,8 +82,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0;
-  gap: 16px;
+  padding: 12px 0;
+  gap: 20px;
 }
 
 .site-logo {
@@ -115,9 +115,9 @@ a {
 
 .menu {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   align-items: center;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .menu a {
@@ -127,6 +127,41 @@ a {
 
 .menu a:hover {
   color: var(--text);
+}
+
+.header-phone {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.header-phone img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.header-phone:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.32);
+  transform: translateY(-1px);
+}
+
+.header-phone:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .btn {
@@ -146,6 +181,7 @@ a {
 a:focus-visible,
 summary:focus-visible,
 input:focus-visible,
+select:focus-visible,
 textarea:focus-visible {
   outline: 3px solid #f2c57a;
   outline-offset: 3px;
@@ -449,6 +485,7 @@ label {
 }
 
 input,
+select,
 textarea {
   padding: 12px 14px;
   border-radius: 12px;
@@ -459,6 +496,7 @@ textarea {
 }
 
 .section--light input,
+.section--light select,
 .section--light textarea {
   border-color: #e2d8c8;
 }
@@ -589,6 +627,22 @@ textarea {
 
 @media (max-width: 860px) {
   .menu {
+    display: none;
+  }
+
+  .nav {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .header-phone {
+    width: 42px;
+    padding: 9px;
+    border-radius: 50%;
+  }
+
+  .header-phone span {
     display: none;
   }
 }

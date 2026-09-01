@@ -67,14 +67,18 @@
           "@type": "Organization",
           "@id": "https://shanmon74.ru/#org",
           "name": "ООО «АМУР»",
+          "legalName": "Общество с ограниченной ответственностью «АМУР»",
+          "taxID": "2801273677",
           "url": "https://shanmon74.ru/",
           "email": "kra@xcmg.ru",
           "telephone": "+7 932 019 99 93",
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "RU",
-            "addressLocality": "Челябинск",
-            "streetAddress": "проспект Победы 215, офис 13"
+            "postalCode": "675002",
+            "addressRegion": "Амурская область",
+            "addressLocality": "Благовещенск",
+            "streetAddress": "ул. Лазо, д. 2, офис 605/1"
           },
           "contactPoint": [
             {
@@ -154,10 +158,10 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Какая цена на SHANMON 388H (388Н)?",
+              "name": "Какая цена на SHANMON 388H?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Цена по запросу. Запросите КП — подготовим коммерческое предложение."
+                "text": "Цена по запросу. В КП цена не указана, поэтому оформляем запрос и направляем коммерческое предложение."
               }
             },
             {
@@ -166,6 +170,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Да, статус — в наличии."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Можно ли купить SHANMON 388H в лизинг?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Да. ООО «АМУР» помогает оформить покупку SHANMON 388H в лизинг через лизинговую компанию. Подробные условия — на странице SHANMON 388H в лизинг."
               }
             },
             {
@@ -181,7 +193,7 @@
               "name": "Какие условия поставки DDP?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Базис поставки: DDP г. Челябинск / Забайкальск. Возможна доставка — условия уточняются в КП."
+                "text": "Базис поставки: DDP г. Челябинск / Забайкальск. Доставка SHANMON 388H возможна по всей России. Сроки, стоимость и условия поставки указываются в коммерческом предложении."
               }
             },
             {
@@ -197,7 +209,23 @@
               "name": "Какая комплектация и навесное оборудование?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "В комплектации указаны ковш 6-в-1 с вилами, гидромолот, телескопическая рукоять, гидролиния и другое оборудование — полный список смотрите на странице."
+                "text": "Ковш 6-в-1 с вилами, гидромолот, телескопическая рукоять, гидролиния и другое навесное — список указан в комплектации."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Какой двигатель установлен?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "YUCHAI YC4A105Z-T20, 75 кВт / 102 л.с., дизель, турбированный."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Какие мосты и коробка передач?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Мосты CARRARO, трансмиссия Automatic PowerShift, ГТР модель 315."
               }
             }
           ]
@@ -214,19 +242,20 @@
   </noscript>
   <header class="site-header">
     <div class="container nav">
-      <a class="site-logo" href="#hero" aria-label="Экскаватор-погрузчик SHANMON 388H в Челябинске">
+      <a class="site-logo" href="/" aria-label="Экскаватор-погрузчик SHANMON 388H в Челябинске">
         <span class="logo-brand">SHANMON</span>
         <span class="logo-desc">Экскаватор-погрузчик 388H</span>
         <span class="logo-geo">Челябинск / Урал</span>
       </a>
       <nav class="menu" aria-label="Основная навигация">
-        <a href="#benefits">Преимущества</a>
-        <a href="#applications">Применение</a>
-        <a href="#specs">Характеристики</a>
-        <a href="#package">Комплектация</a>
-        <a href="tel:+79320199993" class="btn btn--ghost" aria-label="Позвонить: +7 932 019 99 93">Связаться</a>
-        <a href="#contacts" class="btn btn--primary cta-header" aria-label="Запросить КП или цену">Запросить КП / цену</a>
+        <a href="/#price">Цена</a>
+        <a href="/harakteristiki/">Характеристики</a>
+        <a href="/#package">Комплектация</a>
+        <a href="/lizing/">Лизинг</a>
+        <a href="/zapchasti-shanmon/">Запчасти</a>
+        <a href="/#gallery">Фото</a>
       </nav>
+      <a href="tel:+79320199993" class="header-phone" aria-label="Позвонить: +7 932 019-99-93"><img src="/phone.svg" alt=""><span>+7 932 019-99-93</span></a>
     </div>
   </header>
 
@@ -235,7 +264,7 @@
       <div class="container hero__grid">
         <div class="hero__copy">
           <h1>Экскаватор-погрузчик SHANMON 388H — в наличии, Челябинск / Забайкальск</h1>
-          <p class="lead">Экскаватор-погрузчик SHANMON 388H в наличии, базис поставки DDP Челябинск / Забайкальск, гарантия 12 месяцев или 1000 м/ч. Цена по запросу — запросить КП у ООО «АМУР».</p>
+          <p class="lead">Экскаватор-погрузчик SHANMON 388H в наличии, базис поставки DDP Челябинск / Забайкальск, гарантия 12 месяцев или 1000 м/ч.</p>
           <div class="cta-group">
             <a href="#contacts" class="btn btn--primary">Цена по запросу / запросить КП</a>
             <a href="#gallery" class="btn btn--light">Смотреть фото</a>
@@ -252,6 +281,10 @@
             <li>
               <span>12 месяцев</span>
               <small>или 1000 м/ч</small>
+            </li>
+            <li>
+              <span>Доставка по всей России</span>
+              <small>условия в коммерческом предложении</small>
             </li>
           </ul>
 
@@ -289,12 +322,16 @@
           </article>
           <article>
             <h3>Поставка DDP</h3>
-            <p>Базис поставки: DDP г. Челябинск / Забайкальск. Возможна доставка, условия уточняются в КП.</p>
+            <p>Базис поставки: DDP г. Челябинск / Забайкальск. Доставка по всей России. Сроки, стоимость и условия поставки указываются в коммерческом предложении.</p>
           </article>
           <article>
             <h3>Гарантия</h3>
             <p>12 месяцев или 1000 м/ч.</p>
           </article>
+        </div>
+        <div class="cta-group">
+          <a href="#contacts" class="btn btn--primary">Запросить актуальную цену и КП</a>
+          <a href="/shanmon-388/" class="btn btn--light">SHANMON 388 — поставка под заказ</a>
         </div>
       </div>
     </section>
@@ -332,8 +369,8 @@
         </div>
         <div class="grid benefits">
           <article>
-            <h3>Официальный представитель</h3>
-            <p>ООО «АМУР» — официальный российский представитель концерна SHANMON.</p>
+            <h3>Поставщик техники</h3>
+            <p>ООО «АМУР» — поставщик экскаваторов-погрузчиков SHANMON 388H.</p>
           </article>
           <article>
             <h3>Гарантия</h3>
@@ -399,56 +436,23 @@
           <table class="specs">
             <tbody>
               <tr><th>Бренд/модель</th><td>SHANMON / 388H</td></tr>
-              <tr><th>Общая длина</th><td>6450 ±50 мм</td></tr>
-              <tr><th>Ширина (по внешнему краю шин)</th><td>2490 ±20 мм</td></tr>
-              <tr><th>Ширина ковша</th><td>2490 ±30 мм</td></tr>
-              <tr><th>Высота до верха кабины</th><td>3120 ±20 мм</td></tr>
-              <tr><th>Общая высота (до верха выемочной стрелы)</th><td>3940 ±20 мм</td></tr>
               <tr><th>Номинальная грузоподъёмность</th><td>2500 кг</td></tr>
               <tr><th>Эксплуатационная масса</th><td>10800 кг</td></tr>
               <tr><th>Ковш погрузчика (стандарт)</th><td>1.2 м³</td></tr>
               <tr><th>Ковш экскаваторной стрелы (стандарт)</th><td>0.3 м³</td></tr>
-              <tr><th>Макс. высота подъёма фронтального погрузчика (угол разгрузки 41°)</th><td>3050 ±50 мм</td></tr>
-              <tr><th>Расстояние разгрузки</th><td>870 ±20 мм</td></tr>
-              <tr><th>Радиус поворота</th><td>5750 ±50 мм</td></tr>
-              <tr><th>Макс. радиус копания</th><td>5345 ±20 мм</td></tr>
-              <tr><th>Макс. высота загрузки</th><td>3740 ±20 мм</td></tr>
-              <tr><th>Макс. высота копания</th><td>5470 ±20 мм</td></tr>
-              <tr><th>Подъёмная сила при макс. радиусе копания</th><td>1220 кг</td></tr>
               <tr><th>Макс. глубина копания (телескопическая стрела)</th><td>4970 ±20 мм</td></tr>
-              <tr><th>Макс. высота погрузки (телескопическая стрела)</th><td>4983 ±20 мм</td></tr>
-              <tr><th>Макс. высота копания (телескопическая стрела)</th><td>6680 ±20 мм</td></tr>
-              <tr><th>Количество контуров</th><td>Трёхконтурный</td></tr>
-              <tr><th>Тип переключения передачи</th><td>Тумблер</td></tr>
-              <tr><th>Управление</th><td>Джойстик (фронтальная стрела/ковш и экскаваторная стрела/рукоять/ковш)</td></tr>
-              <tr><th>Боковое смещение экскаваторной стрелы</th><td>Гидравлическое</td></tr>
-              <tr><th>Кабина</th><td>ROPS-FOPS, основной/вспомогательный свет спереди/сзади, габаритные огни, зеркала, кондиционер, печь, вентилятор, стеклоочистители/омыватели, магнитола MP3/USB, эргономичное сиденье повышенной комфортности</td></tr>
-              <tr><th>Двигатель</th><td>Дизель, 4-цилиндровый, турбированный, водяное охлаждение</td></tr>
               <tr><th>Модель двигателя</th><td>YC4A105Z-T20</td></tr>
               <tr><th>Мощность</th><td>75 кВт / 102 л.с.</td></tr>
-              <tr><th>Объём двигателя</th><td>4800 см³</td></tr>
-              <tr><th>Обороты</th><td>2200 об/мин</td></tr>
-              <tr><th>Крутящий момент</th><td>400 Н·м</td></tr>
-              <tr><th>Производитель двигателя</th><td>YUCHAI</td></tr>
               <tr><th>АКПП</th><td>Automatic PowerShift</td></tr>
-              <tr><th>ГТР</th><td>Модель 315</td></tr>
-              <tr><th>Скорости вперёд</th><td>1) 5, 2) 10, 3) 18, 4) 32 км/ч</td></tr>
-              <tr><th>Скорости назад</th><td>1) 5, 2) 10, 3) 18, 4) 32 км/ч</td></tr>
-              <tr><th>Колёсная база</th><td>2335 мм</td></tr>
               <tr><th>Шины</th><td>16.9-28 (всесезонные, протектор «ёлочка», привод 4×4)</td></tr>
               <tr><th>Крабовый ход</th><td>Да</td></tr>
               <tr><th>Тип моста</th><td>CARRARO, дифференцированная с редуктором (бортовой редуктор)</td></tr>
-              <tr><th>Тормоза</th><td>Гидравлические</td></tr>
               <tr><th>Гидросистема</th><td>Аксиально-поршневой насос HEHGLI, поток 160 л/мин</td></tr>
-              <tr><th>Производительность насоса</th><td>80 ml/r</td></tr>
-              <tr><th>Давление</th><td>20 MPa</td></tr>
-              <tr><th>Гидробак</th><td>125 л</td></tr>
-              <tr><th>Топливный бак</th><td>125 л</td></tr>
-              <tr><th>Картер двигателя</th><td>12 л</td></tr>
-              <tr><th>Картер ЭКПП</th><td>28 л</td></tr>
-              <tr><th>Передний/задний мост</th><td>12/12 л</td></tr>
             </tbody>
           </table>
+        </div>
+        <div class="cta-group">
+          <a href="/harakteristiki/" class="btn btn--light">Все технические характеристики SHANMON 388H</a>
         </div>
       </div>
     </section>
@@ -610,10 +614,12 @@
       <div class="container">
         <div class="section__head">
           <h2>Контакты и заявка</h2>
-          <p>Официальный представитель SHANMON в России — ООО «АМУР».</p>
+          <p>ООО «АМУР» — поставщик экскаваторов-погрузчиков SHANMON 388H.</p>
         </div>
         <div class="contacts">
-          <form class="form" aria-label="Форма заявки" action="mailto:kra@xcmg.ru" method="post" enctype="text/plain">
+          <form class="form" aria-label="Форма заявки" action="https://formspree.io/f/xppzpzqj" method="post">
+            <input type="hidden" name="source" value="SHANMON 388H — главная">
+            <input type="hidden" name="subject" value="Новая заявка с shanmon74.ru — SHANMON 388H">
             <label>
               <span>Имя</span>
               <input type="text" name="name" autocomplete="name" required>
@@ -621,6 +627,14 @@
             <label>
               <span>Телефон</span>
               <input type="tel" name="phone" autocomplete="tel" required>
+            </label>
+            <label class="form__full">
+              <span>Тип обращения</span>
+              <select name="request_type">
+                <option value="price_quote" selected>Запросить цену / КП</option>
+                <option value="leasing">Рассчитать лизинг</option>
+                <option value="other">Другой вопрос</option>
+              </select>
             </label>
             <label class="form__full">
               <span>Комментарий</span>
@@ -635,15 +649,23 @@
           <div class="contacts__info">
             <div>
               <h3>Отдел продаж</h3>
-              <p>+7 932 019 99 93</p>
-              <p>kra@xcmg.ru</p>
-              <p>Челябинск, пр-т Победы 215, офис 13</p>
+              <p><a href="tel:+79320199993">+7 932 019 99 93</a></p>
+              <p><a href="mailto:kra@xcmg.ru">kra@xcmg.ru</a></p>
+              <p>Отдел продаж: Челябинск, пр-т Победы 215, офис 13</p>
             </div>
             <div class="contacts__note">
               <h3>Контактное лицо</h3>
               <p>Кадыров Рустам</p>
-              <p>+7 932 019 99 93</p>
+              <p><a href="tel:+79320199993">+7 932 019 99 93</a></p>
               <a href="#hero" class="btn btn--light">Вернуться наверх</a>
+            </div>
+            <div class="contacts__note">
+              <h3>Реквизиты ООО «АМУР»</h3>
+              <p>ИНН 2801273677</p>
+              <p>КПП 280101001</p>
+              <p>ОГРН 1232800002181</p>
+              <p>Юридический адрес: 675002, Амурская область, г. Благовещенск, ул. Лазо, д. 2, офис 605/1</p>
+              <p>Генеральный директор: Михайлюк Ирина Вячеславовна</p>
             </div>
           </div>
         </div>
@@ -666,12 +688,16 @@
             <p>Да, статус — в наличии.</p>
           </details>
           <details>
+            <summary>Можно ли купить SHANMON 388H в лизинг?</summary>
+            <p>Да. ООО «АМУР» помогает оформить покупку SHANMON 388H в лизинг через лизинговую компанию. Подробные условия — на странице <a href="/lizing/">SHANMON 388H в лизинг</a>.</p>
+          </details>
+          <details>
             <summary>Какая гарантия на экскаватор-погрузчик?</summary>
             <p>Гарантия 12 месяцев или 1000 м/ч.</p>
           </details>
           <details>
             <summary>Какие условия поставки DDP?</summary>
-            <p>Базис поставки: DDP г. Челябинск / Забайкальск. Возможна доставка — условия уточняются в КП.</p>
+            <p>Базис поставки: DDP г. Челябинск / Забайкальск. Доставка SHANMON 388H возможна по всей России. Сроки, стоимость и условия поставки указываются в коммерческом предложении.</p>
           </details>
           <details>
             <summary>Возможна ли доставка по Уралу?</summary>
@@ -709,7 +735,7 @@
     <div class="container footer">
       <div>
         <strong>ООО «АМУР»</strong>
-        <p>Официальный российский представитель концерна SHANMON.</p>
+        <p>ИНН 2801273677 · ОГРН 1232800002181</p>
       </div>
       <div>
         <p>© 2026 SHANMON. Все права защищены.</p>

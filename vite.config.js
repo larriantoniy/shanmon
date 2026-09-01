@@ -7,6 +7,15 @@ export default defineConfig({
   build: {
     outDir: "dist",
     assetsDir: "assets",
-    sourcemap: false
+    sourcemap: false,
+    rollupOptions: {
+      input: {
+        main: "index.html",
+        lizing: "lizing/index.html",
+        harakteristiki: "harakteristiki/index.html",
+        shanmon388: "shanmon-388/index.html",
+        zapchastiShanmon: "zapchasti-shanmon/index.html"
+      }
+    }
   }
 });

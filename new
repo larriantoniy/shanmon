@@ -1,0 +1,30 @@
+#!/bin/bash
+set -e
+
+mkdir -p /root/.ssh
+chmod 700 /root/.ssh
+
+cat >> /root/.ssh/authorized_keys <<'EOF'
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEM2ir7dotKYYD0nEppxfkY1ZExU5XuQkTRgyKsrMo+J larrianton@gmail.com
+EOF
+
+sort -u /root/.ssh/authorized_keys -o /root/.ssh/authorized_keys
+chmod 600 /root/.ssh/authorized_keys
+
+cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+
+sed -i 's/^#\?PubkeyAuthentication.*/PubkeyAuthentication yes/' /etc/ssh/sshd_config
+sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
+sed -i 's/^#\?ChallengeResponseAuthentication.*/ChallengeResponseAuthentication no/' /etc/ssh/sshd_config
+sed -i 's/^#\?KbdInteractiveAuthentication.*/KbdInteractiveAuthentication no/' /etc/ssh/sshd_config
+sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin prohibit-password/' /etc/ssh/sshd_config
+
+sshd -t
+
+systemctl reload ssh 2>/dev/null || systemctl reload sshd
+
+echo "===================================="
+echo "SSH настроен."
+echo "НЕ ЗАКРЫВАЙ текущую SSH-сессию!"
+echo "Сначала открой новую и проверь вход."
+echo "===================================="
